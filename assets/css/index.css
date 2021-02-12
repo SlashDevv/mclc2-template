@@ -1,0 +1,141 @@
+* {
+  font-family: sans-serif;
+}
+
+#title {
+  color: lightseagreen;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../img/bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.empty {
+  flex: 1;
+}
+
+.loginform {
+  background-color: rgba(255, 255, 255, 0.75);
+  clip-path: polygon(6% 0, 100% 0%, 100% 100%, 1% 100%);
+  flex: 1;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.loginform:hover {
+  clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%);
+  transition-duration: 0.5s;
+}
+
+#logo {
+  width: 256px;
+  height: 256px;
+}
+#pseudo {
+  background-image: url(../img/user.svg);
+}
+#mdp {
+  background-image: url(../img/padlock.svg);
+}
+#pseudo,
+#mdp {
+  border: 3px lightseagreen solid;
+  background-repeat: no-repeat;
+  background-position: 5px 8px;
+  background-size: 20px;
+  padding: 10px;
+  margin: 5px;
+  min-width: 200px;
+  border-radius: 15px;
+  text-indent: 25px;
+  outline: none;
+  transition: 0.5s ease-out;
+  color: lightseagreen;
+}
+
+#pseudo:hover,
+#pseudo:focus,
+#mdp:hover,
+#mdp:focus {
+  box-shadow: 0px 2px 5px orange;
+  border-color: orange;
+  color: orange;
+}
+
+button {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 5px 5px lightseagreen;
+  transition: 0.5s ease-out;
+}
+button:not([disabled]):hover,
+button:not([disabled]):focus {
+  background-color: orange;
+  color: white;
+  box-shadow: 0px 5px 5px orange;
+  transform: scale(0.95, 0.95);
+}
+.alert {
+  background: tomato;
+  color: white;
+  padding: 10px;
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 200px;
+  background-color: white;
+  color: black;
+  border-top: 5px orange solid;
+  box-shadow: 0px 2px 5px orange;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+}
+#snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

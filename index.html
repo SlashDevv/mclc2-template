@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SlashDev - Login</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <div class="empty"></div>
+
+    <div class="loginform">
+      <img id="logo" src="assets/img/slashdev.png" alt="" />
+      <h1 id="title">Bienvenue sur le launcher !</h1>
+      <input type="text" id="pseudo" placeholder="Pseudonyme" />
+      <input type="password" id="mdp" placeholder="Mot de passe" />
+      <button id="loginbtn">Connexion</button>
+      <p class="alert">
+        Un compte Mojang est requis pour se connecter. De manière générale, vous
+        pouvez utiliser l'email en tant que pseudonyme .
+      </p>
+    </div>
+
+    <div id="snackbar">Chargement en cours...</div>
+
+    <script>
+      // Importation des modules
+      const ipc = require("electron").ipcRenderer;
+
+      // Variables utiles
+      let inputPseudo = document.getElementById("pseudo");
+      let inputMdp = document.getElementById("mdp");
+      let loginBtn = document.getElementById("loginbtn");
+      let snackbar = document.getElementById("snackbar");
+
+      // Fonction de Snackbar
+      function snack(txt) {
+        snackbar.innerHTML = txt;
+        snackbar.classList.add("show");
+        setTimeout(() => {
+          snackbar.classList.remove("show");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
