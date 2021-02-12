@@ -13,7 +13,7 @@ npm run start
 Ou installer et extraire le fichier zip.
 
 ## Sources
-slashdev.png - Il s'agit de mon icone, vous pouvez l'utiliser librement en faisant apparaitre mon site comme source ([http://slashdev.eu](http://slashdev.eu))
-[bg1.png](https://pixabay.com/illustrations/minecraft-wallpaper-background-2053882/)
-[user.svg](https://www.flaticon.com/free-icon/user_1077114)
-[padlock.svg](https://www.flaticon.com/free-icon/padlock_3064155)
+- slashdev.png : Il s'agit de mon icone, vous pouvez l'utiliser librement en faisant apparaitre mon site comme source ([http://slashdev.eu](http://slashdev.eu))
+- [bg1.png](https://pixabay.com/illustrations/minecraft-wallpaper-background-2053882/)
+- [user.svg](https://www.flaticon.com/free-icon/user_1077114)
+- [padlock.svg](https://www.flaticon.com/free-icon/padlock_3064155)
